@@ -8,9 +8,11 @@ const styles = css`
   }
 
   :root {
-    --fontNormal: sans-serif;
-    --fontCursive: cursive;
-    --padding: clamp(2rem, 4vw, 4rem);
+    --fontNormal: 'Montserrat', sans-serif;
+    --fontHeading: 'Barlow Condensed', sans-serif;
+    --paddingBlock: clamp(1rem, 4vw, 1.5rem);
+    --paddingInline: clamp(2rem, 4vw, 4rem);
+    --padding: var(--paddingBlock) var(--paddingInline);
 
     --colorPrimary: #000;
     --colorSecondary: #000;
@@ -22,8 +24,13 @@ const styles = css`
     font-family: var(--fontNormal);
   }
 
-  h1 {
-    font-family: var(--fontCursive);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--fontHeading);
   }
 
   ul {
